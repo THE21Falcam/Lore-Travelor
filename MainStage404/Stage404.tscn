@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=4 uid="uid://bb4nbanfuuqmt"]
+[gd_scene load_steps=5 format=4 uid="uid://da1jtf81qy7bk"]
 
 [ext_resource type="Texture2D" uid="uid://1kke4lsicfv7" path="res://Assets/DungenTileSet.png" id="1_hsde2"]
 [ext_resource type="PackedScene" uid="uid://djg1ir4hcfdw2" path="res://Player/Player.tscn" id="2_qdf3k"]

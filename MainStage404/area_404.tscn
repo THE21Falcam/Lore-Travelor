@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cmgsyf57vsh3i" path="res://MainStage404/area_404.gd" id="1_4l6l1"]
 [ext_resource type="Texture2D" uid="uid://ctt2evxr62lay" path="res://Assets/dungeonSprites by analogstudios/demon_.png" id="2_tml80"]
-[ext_resource type="PackedScene" uid="uid://bb4nbanfuuqmt" path="res://Stages/Stage404.tscn" id="2_ywixg"]
 [ext_resource type="PackedScene" uid="uid://ggcpguhg7tpf" path="res://Marker/Marker.tscn" id="4_tml80"]
 [ext_resource type="PackedScene" uid="uid://djskjrvadx0mb" path="res://HUD/HUD.tscn" id="5_mjxnc"]
+[ext_resource type="PackedScene" path="res://MainStage404/Stage404.tscn" id="5_tml80"]
 
 [node name="Area404" type="Node2D" node_paths=PackedStringArray("Tile", "Marker", "Line")]
 script = ExtResource("1_4l6l1")
@@ -19,13 +19,14 @@ offset_right = 531.0
 offset_bottom = 322.0
 color = Color(0.0923971, 0.0923971, 0.0923971, 1)
 
-[node name="Stage404" parent="." instance=ExtResource("2_ywixg")]
-
 [node name="MouseAssets" type="Sprite2D" parent="."]
 visible = false
 texture = ExtResource("2_tml80")
 hframes = 8
 vframes = 6
+
+[node name="Stage404" parent="." instance=ExtResource("5_tml80")]
+position = Vector2(0, 32)
 
 [node name="Line2D" type="Line2D" parent="."]
 visible = false
