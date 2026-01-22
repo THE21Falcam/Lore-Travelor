@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ctt2evxr62lay" path="res://Assets/dungeonSprites by analogstudios/demon_.png" id="2_tml80"]
 [ext_resource type="PackedScene" uid="uid://ggcpguhg7tpf" path="res://Marker/Marker.tscn" id="4_tml80"]
 [ext_resource type="PackedScene" uid="uid://djskjrvadx0mb" path="res://HUD/HUD.tscn" id="5_mjxnc"]
-[ext_resource type="PackedScene" path="res://MainStage404/Stage404.tscn" id="5_tml80"]
+[ext_resource type="PackedScene" uid="uid://da1jtf81qy7bk" path="res://MainStage404/Stage404.tscn" id="5_tml80"]
 
 [node name="Area404" type="Node2D" node_paths=PackedStringArray("Tile", "Marker", "Line")]
 script = ExtResource("1_4l6l1")
