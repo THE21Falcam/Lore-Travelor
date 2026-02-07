@@ -1,7 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://cdnxw1hsaefsx"]
+[gd_scene format=3 uid="uid://cdnxw1hsaefsx"]
 
+[ext_resource type="Script" uid="uid://cmgsyf57vsh3i" path="res://MainStage404/MainStage.gd" id="1_ngmlj"]
 [ext_resource type="PackedScene" uid="uid://2d8jk3gy44jg" path="res://Stages/ProtoStage_2.tscn" id="1_ykeuq"]
+[ext_resource type="PackedScene" uid="uid://ggcpguhg7tpf" path="res://Marker/Marker.tscn" id="2_1cm16"]
+[ext_resource type="PackedScene" uid="uid://djskjrvadx0mb" path="res://HUD/HUD.tscn" id="5_7nhwn"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=1560167170 node_paths=PackedStringArray("Tile", "Marker", "Line")]
+texture_filter = 1
+script = ExtResource("1_ngmlj")
+Tile = NodePath("TileMapLayer")
+Marker = NodePath("Marker")
+Line = NodePath("Line2D")
 
-[node name="TileMapLayer" parent="." instance=ExtResource("1_ykeuq")]
+[node name="TileMapLayer" parent="." unique_id=1173313473 instance=ExtResource("1_ykeuq")]
+
+[node name="Line2D" type="Line2D" parent="." unique_id=747701328]
+position = Vector2(8, 8)
+
+[node name="Players" type="Node2D" parent="." unique_id=1195496465]
+
+[node name="Marker" parent="." unique_id=143979164 instance=ExtResource("2_1cm16")]
+position = Vector2(24, 24)
+
+[node name="Camera2D" type="Camera2D" parent="Marker" unique_id=523707418]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.4
+drag_top_margin = 0.4
+drag_right_margin = 0.4
+drag_bottom_margin = 0.4
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=800948895]
+
+[node name="HUD" parent="CanvasLayer" unique_id=808984672 instance=ExtResource("5_7nhwn")]

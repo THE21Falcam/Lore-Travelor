@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var Player = load("res://Player/Player.tscn")
 @export var Tile:TileMapLayer
 @onready var EnemySprite = $Enemy
 @export var Marker:CharacterBody2D
@@ -22,6 +23,10 @@ var toMove = false
 var canAttack = false
 
 func _ready():
+	for i in Tile.get_children():
+		var instance = Player.instantiate()
+		$Players.add_child(instance, true, 1)
+		instance.position = i.position
 	Camera.zoom = zoom
 	
 	astar_grid = AStarGrid2D.new()
